@@ -20,6 +20,8 @@ Objects {
   ChildIds: 10005074784157121906
   ChildIds: 14982843161775482339
   ChildIds: 16776078930663244158
+  ChildIds: 8883692570952654809
+  ChildIds: 13781888789258566560
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -32,6 +34,90 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 13781888789258566560
+  Name: "Language Selection Popup"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 13218263224089258389
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Language Selection Popup"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 15539689643341158280
+    }
+  }
+}
+Objects {
+  Id: 8883692570952654809
+  Name: "Locale Manager"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 5736416730870959479
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Locale Manager"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 13008372707920753945
+    }
   }
 }
 Objects {
@@ -716,6 +802,7 @@ Objects {
     IsDefault: true
     GameSettings {
       RagdollOnDeath: true
+      EnablePlayerStorage: true
       ChatMode {
         Value: "mc:echatmode:teamandall"
       }
