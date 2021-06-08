@@ -23,6 +23,7 @@ Objects {
   ChildIds: 8883692570952654809
   ChildIds: 13781888789258566560
   ChildIds: 4599223418095324258
+  ChildIds: 7025565652230212728
   UnregisteredParameters {
   }
   Collidable_v2 {
@@ -35,6 +36,38 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Folder {
+  }
+}
+Objects {
+  Id: 7025565652230212728
+  Name: "Example Dynamic Text"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4781671109827199097
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 120873738411962702
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Example Dynamic Text"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 6371814748134323876
+    }
   }
 }
 Objects {

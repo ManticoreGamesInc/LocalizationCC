@@ -1,6 +1,6 @@
 --[[
 	Locale Text Scanner
-	v1.0
+	v1.1
 	by: standardcombo
 	
 	This is a tool to help prepare a game for localization. It works by continuously

@@ -1,6 +1,6 @@
 --[[
 	Show Language Selection Popup
-	v1.0
+	v1.1
 	by: standardcombo
 	
 	Automatically opens the Language Selection Popup if the player has never selected
