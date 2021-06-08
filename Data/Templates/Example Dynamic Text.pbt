@@ -276,6 +276,12 @@ Assets {
           }
         }
         ParentId: 9076881017378146742
+        UnregisteredParameters {
+          Overrides {
+            Name: "cs:AutoLocalize"
+            Bool: false
+          }
+        }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
