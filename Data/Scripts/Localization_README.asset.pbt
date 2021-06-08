@@ -1,6 +1,6 @@
 Assets {
-  Id: 4770301156623242925
-  Name: "CoreStringTest"
+  Id: 8487486426896657993
+  Name: "Localization_README"
   PlatformAssetType: 3
   TextAsset {
   }

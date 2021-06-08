@@ -4,6 +4,23 @@
 	by: standardcombo
 	Based on the work of: blackdheart
 	
+	Supports the following languages by default. To add more edit the
+	`UpdateTitleAndButton()` function:
+	
+	English - enUS
+	French - frFR
+	Italian - itIT
+	Russian - ruRU
+	German - deDE
+	Turkish - trTR
+	Spanish (Spain) - esES
+	Spanish (LatAm) - esMX
+	Portuguese (Portugal) - ptPT
+	Portuguese (Brazil) - ptBR
+	Chinese (Simplified) - zhCN
+	Chinese (Traditional) - zhTR
+	Japanese - jpJP
+	Korean - krKR
 	
 --]]
 
@@ -67,6 +84,22 @@ function UpdateTitleAndButton()
     elseif selectedKey == "ptBR" then
     	TITLE_TEXT.text = "Selecionar Idioma"
     	CONFIRM_BUTTON.text = "Confirmar"
+    	
+    elseif selectedKey == "zhCN" then
+    	TITLE_TEXT.text = "选择语言"
+    	CONFIRM_BUTTON.text = "确认"
+    	
+    elseif selectedKey == "zhTW" then
+    	TITLE_TEXT.text = "選擇語言"
+    	CONFIRM_BUTTON.text = "確認"
+    	
+    elseif selectedKey == "jpJP" then
+    	TITLE_TEXT.text = "言語を選択する"
+    	CONFIRM_BUTTON.text = "続ける"
+    	
+    elseif selectedKey == "krKR" then
+    	TITLE_TEXT.text = "언어 선택"
+    	CONFIRM_BUTTON.text = "계속하기"
     end
 end
 
