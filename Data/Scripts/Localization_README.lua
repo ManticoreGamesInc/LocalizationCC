@@ -215,16 +215,48 @@
 	Language Selection Popup (template)
 	========================
 	
-	<TODO>
+	The Language Selection Popup is a UI template that gives players the choice
+	of language to play in.
+	
+	Setup:
+	1. Add a copy of the template to the hierarchy.
+	2. Customize the style to match your game's look/feel.
+	
+	The template contains a script called `ShowLanguageSelectionPopup`. All
+	this script does is to broadcast the event "Show_LanguageSelectionPopup"
+	if the player has never selected a language before. Your game may desire
+	a custom UI flow for when to display the language choice. In that case,
+	delete the script `ShowLanguageSelectionPopup` and broadcast the event
+	"Show_LanguageSelectionPopup" at the right moment. This event can also
+	be used if your game contains a settings screen that allows the player
+	to change their language at any time.
 	
 	
 	Dynamic Texts
 	=============
 	
-	<TODO>
+	For an example of dynamic text replacement see the
+	`Example Dynamic Text` template.
 	
-	E.g. Hello {player}, welcome to Core!
+	It's often the case where placeholder symbols are used in texts, for
+	the purpose of replacing them at runtime.
 	
+	E.g.
+	"Hello {player}, welcome to Core!"
+	becomes:
+	"Hello standardcombo, welcome to Core!"
+	
+	In the above example, instead of using the string:
+	"Hello {player}, welcome to Core!"
+	
+	You could imagine using two strings with concatenation, such as:
+	"Hello " .. player.name .. ", welcome to Core!"
+	
+	While in English this is fine, in other languages the position of
+	subject/verb and other gramatical structures varies wildly. The strategy
+	of replacing tokens at runtime is a way to give to the translators the
+	power to customize the gramar, without having to understand relationships
+	between two different texts in the spreadsheet.
 	
 	
 	Testing & Bugfixing
@@ -239,13 +271,18 @@
 	   It's not important to run the scanner for all text, as new texts or
 	   texts that were missed can be entered manually into the spreadsheet.
 	   
-	2. Texts in some languages may not fit into the UI layout. In those cases,
+	2. Texts in an established game may be in a default context or networked.
+	   Localization only makes sense in a client context, because each player
+	   will select their own language. Components such as the Text Detector
+	   will ignore Text objects that are not in a client context.
+	   
+	3. Texts in some languages may not fit into the UI layout. In those cases,
 	   you can specify a glyph limit in the spreadsheet's second column and
 	   ask the translators to see if they can come up with shorter versions.
 	   In some cases it may be better to modify the UI elements to behave in
 	   a more dynamic fashion, in a way that is flexible to the content size.
 	   
-	3. Sometimes special alphabets, such as Cyrillic, can be missing some of
+	4. Sometimes special alphabets, such as Cyrillic, can be missing some of
 	   the glyphs in one of the fonts. If that happens, report the issue to
 	   Manticore and try to find an alternative translation that works. If
 	   needed, you can disable the translation of a text in a specific
