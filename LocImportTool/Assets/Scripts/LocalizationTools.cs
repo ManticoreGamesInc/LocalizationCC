@@ -8,7 +8,7 @@ using SimpleFileBrowser;
 
 public class LocalizationTools : MonoBehaviour
 {
-	private const string VERSION = "1.2";
+	private const string VERSION = "1.3";
 
 	private const string CORE_PATH = "\\My Games\\CORE\\Saved\\Maps";
 	private const string DEFAULT_FILE_NAME = "LocaleLibrary.lua";
@@ -369,14 +369,15 @@ end
 			pathSansExtension = filePath.Substring(0, lastIndexOf);
 		}
 
-		// Accompanying .pbt for the main Library file
-		WritePBT(pathSansExtension);
-
 		// Write the individual files, one per language
+		List<string> languageFileNames = new List<string>();
+		List<ulong> languageFileMUIDs = new List<ulong>();
 		for (int i = 0; i < data.languages.Count; i++)
 		{
 			string languageId = data.languages[i];
 
+			int indexOfLastSlash = pathSansExtension.LastIndexOf('\\');
+			string languageFileNameSansExtension = pathSansExtension.Substring(indexOfLastSlash + 1) + "_" + languageId;
 			string languageFilePath = pathSansExtension + "_" + languageId + extension;
 			Log(languageId + ": " + languageFilePath);
 
@@ -436,15 +437,45 @@ end
 			writer.Close();
 
 			// Accompanying .pbt for the individual language file
-			WritePBT(pathSansExtension + "_" + languageId);
+			ulong muid = WritePBT(pathSansExtension + "_" + languageId);
+			
+			// Add data for custom property to main library file
+			languageFileNames.Add(languageFileNameSansExtension);
+			languageFileMUIDs.Add(muid);
 		}
+
+		// Accompanying .pbt for the main Library file
+		string libraryAssetText = "";
+		if (languageFileNames.Count > 0)
+		{
+			libraryAssetText = @"
+    CustomParameters {";
+
+			for (int i = 0; i < languageFileNames.Count; i++)
+			{
+				string name = languageFileNames[i];
+				ulong muid = languageFileMUIDs[i];
+				libraryAssetText +=
+@"
+      Overrides {
+        Name: " + "\"cs:" + name + '\"' + @"
+        AssetReference {
+          Id: " + muid + @"
+        }
+      }";
+			}
+
+			libraryAssetText += @"
+    }";
+		}
+		WritePBT(pathSansExtension, libraryAssetText);
 	}
 
-	private void WritePBT(string pathSansExtension)
+	private ulong WritePBT(string pathSansExtension, string assetText = "")
 	{
-		if ( !generatePBTs ) return;
+		if ( !generatePBTs ) return 0;
 
-		string languageFilePath = pathSansExtension + ".pbt";
+		string languageFilePath = pathSansExtension + ".asset.pbt";
 		if ( !System.IO.File.Exists(languageFilePath) )
 		{
 			int indexOfLastSlash = pathSansExtension.LastIndexOf('\\');
@@ -454,17 +485,19 @@ end
 
 			StreamWriter writer = new StreamWriter(languageFilePath, false);
 			writer.Write(
-@"
-Assets {
+@"Assets {
   Id: " + muid + @"
   Name: " + '\"' + fileName + '\"' + @"
   PlatformAssetType: 3
-  TextAsset {
+  TextAsset {" + assetText + @"
   }
-  SerializationVersion: 85
+  SerializationVersion: 87
 }");
 			writer.Close();
+
+			return muid;
 		}
+		return 0;
 	}
 
 	private ulong GenerateMUID()
