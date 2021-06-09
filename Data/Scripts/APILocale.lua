@@ -9,6 +9,8 @@
 
 local API = {}
 
+API.LIBRARY = require( script:GetCustomProperty("LocaleLibrary") )
+
 function API.Register(functionTable)
     if not _G.APILocale then
         _G.APILocale = {}

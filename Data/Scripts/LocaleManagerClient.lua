@@ -25,7 +25,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 -- Internal custom property
 local API = require(script:GetCustomProperty("APILocale"))
-local LIBRARY = require(script:GetCustomProperty("LocaleLibrary"))
+local LIBRARY = API.LIBRARY
 
 -- External user properties
 local ROOT = script:GetCustomProperty("ROOT"):WaitForObject()

@@ -8,7 +8,7 @@
 --]]
 
 local API = require(script:GetCustomProperty("APILocale"))
-local LIBRARY = require(script:GetCustomProperty("LocaleLibrary"))
+local LIBRARY = API.LIBRARY
 
 local ROOT = script:GetCustomProperty("ROOT"):WaitForObject()
 local DEFAULT_LANGUAGE_KEY = ROOT:GetCustomProperty("DefaultLanguageKey") or "enUS"
