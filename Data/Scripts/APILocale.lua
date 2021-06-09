@@ -9,7 +9,11 @@
 
 local API = {}
 
-API.LIBRARY = require( script:GetCustomProperty("LocaleLibrary") )
+local libraryAsset = script:GetCustomProperty("LocaleLibrary")
+if not libraryAsset then
+	error("Library of texts not connected to the Locale API. Please refer to the README for instructions.")
+end
+API.LIBRARY = require(libraryAsset)
 
 function API.Register(functionTable)
     if not _G.APILocale then
