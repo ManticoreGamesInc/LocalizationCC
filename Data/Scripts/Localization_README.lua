@@ -55,6 +55,8 @@
 	9. Copy the texts (Ctrl + C).
 	10. Continue with the "Spreadsheet" instructions below...
 	
+	Delete the Text Scanner from the hierarchy when done.
+	
 	
 	The Spreadsheet
 	===============
