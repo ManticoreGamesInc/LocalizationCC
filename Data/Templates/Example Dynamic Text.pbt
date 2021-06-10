@@ -281,6 +281,10 @@ Assets {
             Name: "cs:AutoLocalize"
             Bool: false
           }
+          Overrides {
+            Name: "cs:AutoLocalize:tooltip"
+            String: "To instruct the Text Detector to ignore a UI element, add a custom property such as this, \"AutoLocalize\" (Bool) and set it to false. In this case, the LocExampleDynamicText script will control the translation of the UI text, so we don\'t want the Detector changing it."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"

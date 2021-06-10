@@ -4,7 +4,18 @@
 	by: standardcombo
 	Based on the work of: blackdheart
 	
+	API:
+	- [] Index access. The primary function that translates texts or TIDs.
+	- Register(table) - Used by Locale Manager to connect the API implementation to this facade.
+	- IsRegistered() - Allows scripts to know if the Loc implementation has connected yet.
+	- IsReady() - Lets clients know if the server has sent the local player's current locale.
+	- HasSelected() - Lets clients know if the player has chosen their locale yet.
+	- GetLocaleIndex(key string) - Converts from a locale key to an index. E.g. "enUS" => 1
+	- GetLocaleKey(index int) - Converts from a locale index to a key. E.g. 1 => "enUS"
+	- SetLocaleKey(string) - Set the player's choice of locale and transfer it to the server for storage.
+	- GetPlayerCurrentKey(player) - Returns a given player's current locale key.
 	
+	See Localization_README for more information about this package.
 --]]
 
 local API = {}

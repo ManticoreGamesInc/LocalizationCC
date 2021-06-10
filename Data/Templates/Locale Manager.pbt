@@ -23,6 +23,10 @@ Assets {
             Name: "cs:DeafultLocaleKey"
             String: "enUS"
           }
+          Overrides {
+            Name: "cs:DeafultLocaleKey:tooltip"
+            String: "The first locale players will begin with, before they choose. This also represents the language expected by components, such as the Text Detector, when auto-translating UI elements. The default value of enUS corresponds to American English."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -61,6 +65,10 @@ Assets {
             ObjectReference {
               SubObjectId: 5736416730870959479
             }
+          }
+          Overrides {
+            Name: "cs:ROOT:tooltip"
+            String: "Reference to the root of the template."
           }
         }
         Collidable_v2 {
@@ -134,6 +142,10 @@ Assets {
             ObjectReference {
               SubObjectId: 5736416730870959479
             }
+          }
+          Overrides {
+            Name: "cs:ROOT:tooltip"
+            String: "Reference to the root of the template."
           }
         }
         Collidable_v2 {

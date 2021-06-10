@@ -4,7 +4,19 @@
 	by: standardcombo
 	Based on the work of: blackdheart
 	
+	The purpose of the Text Detector is to automatically replace text in UI
+	elements. It looks for texts corresponding to entries in the library and
+	replaces them based on the player's language choice.
 	
+	Object types supported:
+	- UIText
+	- UIButton
+	- WorldText
+	
+	To prevent individual text elements from being modified by the Text Detector,
+	add a "AutoLocalize" custom property to the UI element, of type Bool.
+	
+	See Localization_README for more information about this package.
 --]]
 local L = require(script:GetCustomProperty("APILocale"))
 

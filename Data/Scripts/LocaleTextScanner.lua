@@ -9,15 +9,16 @@
 	formatted for use in localization sheets.
 	
 	Usage:
-	1. Place a copy of the LocaleTextScanner template into the hierarchy.
-	2. Play the game, either in singleplayer preview or multiplayer preview.
+	1. Place a copy of the `LocaleTextScanner` template into the hierarchy.
+	2. Play the game, either in single or multiplayer preview.
 	3. Explore all features of the game, so all texts can be gathered.
-	   b. Keep UI elements active for at least 1 second.
+	   b) Keep UI elements active for at least 1 second.
 	4. When ready, press LeftShift + T to output the results.
 	5. In the Event Log window, select and copy all the lines that start with "tid_".
 	6. In a spreadsheet, paste the data.
 	7. Delete the LocaleTextScanner template when done.
 	
+	See Localization_README for more information about this package.
 --]]
 
 if not Environment.IsPreview() then

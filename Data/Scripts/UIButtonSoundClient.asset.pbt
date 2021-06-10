@@ -10,6 +10,10 @@ Assets {
           Id: 9990254068196015656
         }
       }
+      Overrides {
+        Name: "cs:Sound:tooltip"
+        String: "Sound effect template to play when the button is pressed."
+      }
     }
   }
   SerializationVersion: 87

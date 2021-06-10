@@ -22,6 +22,7 @@
 	Japanese - jpJP
 	Korean - krKR
 	
+	See Localization_README for more information about this package.
 --]]
 
 local API_LOCALE = require(script:GetCustomProperty("APILocale"))

@@ -11,6 +11,8 @@
 	`AutoLocalize` of type Bool, set to false. This way, the
 	`Locale Text Detector` won't try to modify it, which can lead to bugs as
 	two different scripts try to do a similar job.
+	
+	See Localization_README for more information about this package.
 --]]
 
 local L = require( script:GetCustomProperty("APILocale") )

@@ -4,7 +4,9 @@
 	by: standardcombo
 	Based on the work of: blackdheart
 	
+	Provides the client-side implementations of the Locale API.
 	
+	See Localization_README for more information about this package.
 --]]
 --[[
 Copyright 2021 Manticore Games, Inc.

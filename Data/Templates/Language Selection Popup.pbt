@@ -1326,6 +1326,14 @@ Assets {
               SubObjectId: 7233779592029917705
             }
           }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1642,6 +1650,14 @@ Assets {
             ObjectReference {
               SubObjectId: 18354252891593415455
             }
+          }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
           }
         }
         Collidable_v2 {
@@ -1961,6 +1977,14 @@ Assets {
               SubObjectId: 16752692007205925451
             }
           }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2278,6 +2302,14 @@ Assets {
             ObjectReference {
               SubObjectId: 17178574967488383522
             }
+          }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
           }
         }
         Collidable_v2 {
@@ -2597,6 +2629,14 @@ Assets {
               SubObjectId: 2561167109328690279
             }
           }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -2914,6 +2954,14 @@ Assets {
             ObjectReference {
               SubObjectId: 7814808421705739941
             }
+          }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
           }
         }
         Collidable_v2 {
@@ -3233,6 +3281,14 @@ Assets {
               SubObjectId: 8708167232523289632
             }
           }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -3550,6 +3606,14 @@ Assets {
             ObjectReference {
               SubObjectId: 1672073335753914254
             }
+          }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
           }
         }
         Collidable_v2 {
@@ -3869,6 +3933,14 @@ Assets {
               SubObjectId: 15797412232778505248
             }
           }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
+          }
         }
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
@@ -4186,6 +4258,14 @@ Assets {
             ObjectReference {
               SubObjectId: 7409577523289386595
             }
+          }
+          Overrides {
+            Name: "cs:LocaleKey:tooltip"
+            String: "Locale key associated with this button. This key should match one of the library files. See the README to learn more."
+          }
+          Overrides {
+            Name: "cs:Highlight:tooltip"
+            String: "Reference to the button\'s highlight. This is shown when the button is clicked."
           }
         }
         Collidable_v2 {
