@@ -1,6 +1,6 @@
 --[[
 	Localization Kit
-	v1.1
+	v1.1.1
 	by: standardcombo
 	
 	With the Localization Kit players are able to choose the language they
